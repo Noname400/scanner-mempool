@@ -1,0 +1,26 @@
+/* Стили для таблицы */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+/* Стили для заголовков столбцов */
+thead {
+    background-color: #f2f2f2;
+}
+
+/* Стили для четных строк */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,3 @@
+uniswap-universal-router-decoder
+web3
+psycopg2

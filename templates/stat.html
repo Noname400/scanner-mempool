@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            width: 100%;
+        }
+        table th,
+        table td {
+            width: auto;
+            text-align: left; /* Выравнивание по левому краю */
+            padding: 8px; /* Добавление отступов для ячеек */
+            border: 1px solid #ccc; /* Добавление границы для таблицы */
+        }
+        /* Дополнительные стили для заголовков таблицы */
+        table th {
+            background-color: #f2f2f2; /* Фон заголовков */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pair</th>
+                <th>Price</th>
+                <th>Token0 Address</th>
+                <th>Token0 Name</th>
+                <th>Token0 Decimals</th>
+                <th>Token1 Address</th>
+                <th>Token1 Name</th>
+                <th>Token1 Decimals</th>
+                <th>Dex Address</th>
+                <th>Dex Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
